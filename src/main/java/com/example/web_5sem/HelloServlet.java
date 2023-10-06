@@ -4,7 +4,6 @@ import java.io.PrintWriter;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 //@WebServlet("/")
 public class HelloServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private Object[][] list;
+    private final Object[][] list;
     ResourceBundle res;
     String salary, lang;
     /**
