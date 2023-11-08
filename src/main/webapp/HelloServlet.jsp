@@ -29,5 +29,6 @@
 </h1>
 <%@include file="HelloServletList.jsp"%>
 <%@include file="ChangeLang.jsp"%>
+<%@include file="search.jsp"%>
 </body>
 </html>
