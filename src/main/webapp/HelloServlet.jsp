@@ -11,7 +11,8 @@
 <body>
 <%
   request.setCharacterEncoding("UTF-8");
-  String salary = request.getParameter("salary");
+//  String salary = request.getParameter("salary");
+  String salary = (String)session.getAttribute("salary");
   String lang = request.getParameter("lang");
 
   if (lang == null) lang = "ru";
@@ -20,6 +21,8 @@
             "Параметр lang может принимать значения ru или en вместо \"" + lang + "\"");
     return;
   }
+
+  if (salary.isEmpty()) salary = null;
   ResourceBundle res = ResourceBundle.getBundle("list", new Locale(lang));
 %>
 
